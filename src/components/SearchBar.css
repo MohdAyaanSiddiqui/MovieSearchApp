@@ -1,0 +1,60 @@
+/* SearchBar.css */
+
+.search-bar-form {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 2.5rem 0;
+  gap: 0.7rem;
+}
+
+.search-input {
+  padding: 0.7em 1.2em;
+  border-radius: 8px;
+  border: 1.5px solid #646cff;
+  font-size: 1.1em;
+  width: 260px;
+  background: #222;
+  color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+}
+.search-input:focus {
+  outline: none;
+  border-color: #535bf2;
+  box-shadow: 0 2px 12px rgba(100,108,255,0.10);
+}
+
+.search-btn {
+  padding: 0.7em 1.5em;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #646cff 60%, #535bf2 100%);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(100,108,255,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.search-btn:hover {
+  background: linear-gradient(90deg, #535bf2 60%, #646cff 100%);
+  box-shadow: 0 2px 12px rgba(100,108,255,0.15);
+}
+
+@media (max-width: 600px) {
+  .search-bar-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .search-input {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.6em 0.8em;
+  }
+  .search-btn {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.6em 0.8em;
+  }
+}

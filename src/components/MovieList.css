@@ -1,0 +1,84 @@
+/* MovieList.css */
+
+.movie-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.movie-card {
+  background: rgba(255,255,255,0.10);
+  border-radius: 14px;
+  box-shadow:
+    0 2px 16px rgba(30, 40, 90, 0.13),
+    0 1.5px 8px 0 rgba(100, 108, 255, 0.10),
+    0 0 8px 1px rgba(100, 108, 255, 0.07);
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.movie-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow:
+    0 8px 32px rgba(100,108,255,0.22),
+    0 2px 12px rgba(30, 40, 90, 0.18);
+  background: rgba(100,108,255,0.10);
+}
+.movie-card img {
+  width: 100%;
+  max-width: 140px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.13);
+  background: #222;
+}
+.movie-card h4 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1.1rem;
+  color: #646cff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.movie-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #ccc;
+}
+.movie-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: color 0.2s;
+}
+.movie-card a:hover h4 {
+  color: #535bf2;
+}
+
+@media (max-width: 600px) {
+  .movie-list-container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin: 1rem 0;
+  }
+  .movie-card {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 0.8rem 0.5rem 1rem 0.5rem;
+  }
+  .movie-card img {
+    max-width: 90vw;
+    height: 160px;
+  }
+  .movie-card h4 {
+    font-size: 1rem;
+  }
+  .movie-card p {
+    font-size: 0.92rem;
+  }
+}
