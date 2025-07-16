@@ -26,6 +26,15 @@ function SearchPage(){
     <div className="search-page-container">
       <h1>Movie Search App</h1>
       <SearchBar onSearch={FetchMovies} />
+      {movies.length > 0 && (
+        <button 
+          className="back-btn"
+          onClick={() => setMovies([])}
+          aria-label="Back to search"
+        >
+          &larr; Back
+        </button>
+      )}
       <MovieList movies = {movies} />
     </div>
   )

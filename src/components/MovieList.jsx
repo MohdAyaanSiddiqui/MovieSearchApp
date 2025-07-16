@@ -10,6 +10,8 @@ function MovieList({ movies }) {
             <img
               src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/150"}
               alt={movie.Title}
+              loading="lazy"
+              aria-label={`Poster for ${movie.Title}`}
             />
             <h4>{movie.Title}</h4>
             <p>{movie.Year}</p>

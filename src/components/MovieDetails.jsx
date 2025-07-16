@@ -25,7 +25,7 @@ const MovieDetails = ()=>{
         <div className="movie-details-container">
             <Link to="/" className="back-link">&larr; Back</Link>
             <h1>{movie.Title} ({movie.Year})</h1>
-            <img src={movie.Poster} alt={movie.Title} />
+            <img src={movie.Poster} alt={movie.Title} loading="lazy" aria-label={`Poster for ${movie.Title}`} />
             <p><strong>Genre:</strong> {movie.Genre}</p>
             <p><strong>Plot:</strong> {movie.Plot}</p>
             <p><strong>Director:</strong> {movie.Director}</p>

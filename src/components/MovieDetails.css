@@ -153,11 +153,18 @@
     margin-bottom: 1rem;
   }
   .movie-details-container p {
-    font-size: 0.98rem;
+    font-size: 1.05rem;
+    word-break: break-word;
   }
   .back-link {
     margin-bottom: 1rem;
-    padding: 0.3em 0.7em;
-    font-size: 0.98em;
+    padding: 0.5em 1.2em;
+    font-size: 1.1em;
+    min-width: 44px;
+    min-height: 44px;
   }
+}
+
+.movie-details-container p {
+  color: #222;
 }

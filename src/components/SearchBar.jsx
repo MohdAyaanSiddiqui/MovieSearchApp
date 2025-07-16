@@ -16,8 +16,9 @@ function SearchBar({ onSearch }) {
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
         placeholder="Search for a movie..."
+        aria-label="Search for a movie"
       />
-      <button className="search-btn" type="submit">Search</button>
+      <button className="search-btn" type="submit" aria-label="Search">Search</button>
     </form>
   );
 }
